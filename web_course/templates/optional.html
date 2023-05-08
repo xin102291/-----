@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Persional_information</title>
+    <style>
+        body {
+        background-image: url("http://127.0.0.1:5000/背景03.jpg"); 
+        background-color: linen;
+        background-size: cover;
+        
+        }
+        em {
+        color: rgba(167, 175, 224, 1);
+        }
+        
+        table {
+            width: 1500px; 
+            table-layout: fixed;
+            text-align: center;
+        }
+        h2 {
+        color: maroon;
+        margin-left: 40px;
+        }
+        p {
+            color:rgb(61, 68, 106);
+            }
+        
+        </style>
+        
+        
+</head>
+<body>
+    <h2><a href="/homepage">主頁<br></a></h2>
+    <h2>可選課程列表</h2>
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tr>
+            <th>ID</th>
+            <th>課程名稱</th>
+            <th>學分</th>
+            <th>課程分類</th>
+            <th>開課系所</th>
+            <th>開課年級</th>
+            <th>星期</th>
+            <th>上課節次</th>
+            <th>下課節次</th>
+            <th>課程人數上限</th>
+            <th>目前課程人數</th>
+        </tr>
+        {% for inf in li %}
+        <tr>
+           <td>{{inf[0]}}</td>
+           <td>{{inf[1]}}</td>
+           <td>{{inf[2]}}</td>
+           <td>{{inf[3]}}</td>
+           <td>{{inf[4]}}</td>
+           <td>{{inf[5]}}</td>
+           <td>{{inf[6]}}</td>
+           <td>{{inf[7]}}</td>
+           <td>{{inf[8]}}</td>
+           <td>{{inf[9]}}</td>
+           <td>{{inf[10]}}</td>
+           
+         </tr>
+         {% endfor%}
+    </table>
+    
+    
+</body>

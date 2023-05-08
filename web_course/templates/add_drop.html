@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Persional_information</title>
+    <style>
+        body {
+        background-image: url("http://127.0.0.1:5000/背景03.jpg");
+            
+        background-size: cover;
+        
+        }
+        em {
+        color: rgb(143, 222, 189);
+        }
+        
+        table {
+            width: 770px; 
+            table-layout: fixed;
+        }
+        </style>
+</head>
+<body>
+    <a href="/homepage">主頁<br></a>
+    <a href="http://127.0.0.1:5000/personal">個人資料<br></a>
+    <a href="/optional">可選課程列表<br></a>
+    <a href="/logout">登出<br></a>
+    
+    <form method="POST" action="/add_drop">
+        <input type="text" name='course_id' placeholder="Enter course_id">
+        <select name="play">
+            <option value="0">退選</option>
+            <option value="1">加選</option>
+        </select>
+        <button type="submit">送出</button>
+    </form>
+    {% if p == 0 %}
+    <p>查無資料</p>
+    {% elif p == 1 %}
+    <p>已存在課表中</p>
+    {% elif p == 2 %}
+    <p>超過25學分,無法加選</p>
+    {% elif p == 3 %}
+    <p>人數已滿</p>
+    {% elif p == 4 %}
+    <p>撞課</p>
+    {% elif p == 5 %}
+    <p>成功加選</p>
+    {% elif p == 6 %}
+    <p>必修無法退選</p>
+    {% elif p == 7 %}
+    <p>學分數必須大於9學分</p>
+    {% elif p == 8 %}
+    <p>成功退選</p>
+    {% elif p == 9 %}
+    <p>已選課表無此資料</p>
+    {% endif %}
+
+</body>

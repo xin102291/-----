@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Persional_information</title>
+    <style>
+        body {
+        background-image: url("http://127.0.0.1:5000/背景03.jpg");
+            
+        background-size: cover;
+        
+        }
+        em {
+        color: rgb(143, 222, 189);
+        }
+        
+        table {
+            width: 770px; 
+            table-layout: fixed;
+        }
+        </style>
+</head>
+<body>
+    <h1>Welcome to Course selection system</h1>
+    <div>
+        <form method="POST" action="/login">
+            <input type="text" id="user_id" name="user_id" placeholder="Enter Username">
+            <input type="password" id="password" name="password" placeholder="Enter Password">
+            <button type="submit" value="login">登入</button>
+        </form>
+    </div>
+</body>
